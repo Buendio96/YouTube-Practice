@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="/scripts/calculator.js" defer></script>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+	<div class="body">
+		<div class="calculator">
+			<input type="number" id="firstValue" placeholder="Enter numbers" class="calculator__input">
+			<div class="calculator__functions" id="functions">
+				<button type="button" class="calculator__btn" id="plus">+</button>
+				<button type="button" class="calculator__btn" id="minus">-</button>
+				<button type="button" class="calculator__btn" id="multiply">x</button>
+				<button type="button" class="calculator__btn" id="divide">/</button>
+			</div>
+			<input type="number" id="secondValue" placeholder="Enter numbers" class="calculator__input">
+			<div class="calculator__result-block">
+				<button type="submit" id="showResult" class="calculator__show-result">Show result</button>
+				<h2 class="calculator__result">Result: <span id="result"></span></h2>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
