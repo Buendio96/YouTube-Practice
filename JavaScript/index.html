@@ -4,13 +4,16 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<script src="/scripts/calculator.js" defer></script>
-	<link rel="stylesheet" href="./css/style.css">
+	<script src="./01/calculator.js" defer></script>
+	<script src="./02/script.js" defer></script>
+	<script src="./02/theory.js" defer></script>
+	<link rel="stylesheet" href="./css/Reset.css">
+	<link rel="stylesheet" href="./css/Style.css">
+	<title>Apply</title>
 </head>
 
-<body>
-	<div class="body">
+<body style="position:relative ;">
+	<div class="body-calculator">
 		<div class="calculator">
 			<input type="number" id="firstValue" placeholder="Enter numbers" class="calculator__input">
 			<div class="calculator__functions" id="functions">
@@ -24,6 +27,15 @@
 				<button type="submit" id="showResult" class="calculator__show-result">Show result</button>
 				<h2 class="calculator__result">Result: <span id="result"></span></h2>
 			</div>
+		</div>
+	</div>
+	<div class="container">
+		<h1 class="container__title">Notes</h1>
+		<input type="text" id="mainInput" placeholder="Enter the text" class="container__input">
+		<button type="button" id="create" class="container__btn">Add</button>
+		<div class="container__list list">
+			<h2 class="list__title">List of notes</h2>
+			<ul id="list"></ul>
 		</div>
 	</div>
 </body>
