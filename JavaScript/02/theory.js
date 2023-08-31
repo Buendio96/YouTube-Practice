@@ -3,8 +3,7 @@ const targetName = 'Max'
 names.push('Marcin');
 names.unshift('Ksenia');
 
-
-
+console.log('ABOUT ARRAY AND THERE METHODS ===================== >')
 //console.log('Names:', names.reverse());
 //console.log('Names:', names);
 console.log('Old reversed names:', names.toReversed());

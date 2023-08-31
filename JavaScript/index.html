@@ -7,6 +7,8 @@
 	<script src="./01/calculator.js" defer></script>
 	<script src="./02/script.js" defer></script>
 	<script src="./02/theory.js" defer></script>
+	<script src="./03/aboutNumbers.js" defer></script>
+	<script src="./03/aboutStrings.js" defer></script>
 	<link rel="stylesheet" href="./css/Reset.css">
 	<link rel="stylesheet" href="./css/Style.css">
 	<title>Apply</title>
@@ -29,13 +31,32 @@
 			</div>
 		</div>
 	</div>
-	<div class="container">
-		<h1 class="container__title">Notes</h1>
-		<input type="text" id="mainInput" placeholder="Enter the text" class="container__input">
-		<button type="button" id="create" class="container__btn">Add</button>
-		<div class="container__list list">
+	<div class="todo">
+		<h1 class="todo__title">Notes</h1>
+		<input type="text" id="mainInput" placeholder="Enter the text" class="todo__input">
+		<button type="button" id="create" class="todo__btn">Add</button>
+		<div class="todo__list list">
 			<h2 class="list__title">List of notes</h2>
 			<ul id="list"></ul>
+		</div>
+	</div>
+	<div class="date-time">
+		<h2 class="date-time__title">Date and Time</h2>
+		<div class="date-time__body">
+			<h3 class="date-time__output" id="output">
+				12:12:12
+			</h3>
+			<div class="date-time__buttons">
+				<button id="full" class="date-time__btn full">
+					Full
+				</button>
+				<button id="date" class="date-time__btn date">
+					Date
+				</button>
+				<button id="time" class="date-time__btn time">
+					Time
+				</button>
+			</div>
 		</div>
 	</div>
 </body>
