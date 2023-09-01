@@ -35,6 +35,7 @@ function upDate() {
 	outputDate.textContent = format(mode)
 };
 setInterval(upDate, 1000);
+
 function bindMode(name) {
 	return function () {
 		mode = name
