@@ -15,7 +15,7 @@ body {
 
 .calculator {
   width: 100%;
-  height: 33vw;
+  height: 33vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -236,6 +236,16 @@ body {
   width: 50%;
   height: 33vw;
   text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
   padding: 50px 70px 0;
 }
 .date-time__body {
@@ -269,8 +279,7 @@ body {
   font-family: "Courier New";
 }
 .date-time__buttons {
-  width: 100%;
-  padding: 0 0 0 40px;
+  width: 360px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -279,7 +288,7 @@ body {
           justify-content: space-between;
 }
 .date-time__btn {
-  width: 90px;
+  width: 100px;
   height: 40px;
   font-size: 18px;
   font-family: Georgia;
