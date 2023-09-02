@@ -48,7 +48,41 @@ const logger = {
 	}
 };
 
+logger.keys.bind(person);
+logger.keys.call(person);
+logger.keys.apply(person);
+console.log('');
+console.log('');
+console.log('CLASSES ============ >');
 
-logger.keys.bind(person)()
-logger.keys.call(person)
-logger.keys.apply(person)
+class Human {
+	static isHuman = true;
+
+	humanGreet() {
+		console.log('Human from greeet')
+	}
+}
+
+class Person extends Human {
+	constructor(name, age) {
+		super();
+		this.name = name ?? 'Undefined name';
+		this.age = age ?? 'Undefined age';
+		this.isHuman = this.isHuman
+	}
+	sayHi() {
+		if (this.isHuman) console.log(`Hi ${this.name}`)
+		else console.log('Isn\'t human')
+	}
+
+};
+
+const personI = new Person(
+	'Sasha'
+);
+const personII = new Person(
+	'Julia'
+);
+console.log(Person.isHuman);
+personI.humanGreet();
+personII.sayHi();
