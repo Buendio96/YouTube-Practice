@@ -1,18 +1,18 @@
-import { useState } from 'react'
-import { IProduct } from "../models"
+import { useState } from 'react';
+import { IProduct } from "../models";
 interface ProductProps {
 	product: IProduct
-}
+};
 
 
 export function Product({ product }: ProductProps) {
-	const [details, setDetails] = useState(false)
-
+	const [details, setDetails] = useState(false);
 
 	const btnClasses = [
 		'px-2 py-3 font-bold text-cyan-200 mt-2',
 		details ? 'bg-orange-800' : 'bg-teal-800'
-	]
+	];
+
 	return (
 		<div className="w-1/4  border flex flex-col justify-between border-slate-900 p-3 mt-2">
 			<img className=" w-36 h-52 mx-auto" src={product.image} alt="" />
@@ -30,5 +30,5 @@ export function Product({ product }: ProductProps) {
 				<p onClick={() => setDetails(false)}>{product.description}</p>
 			}
 		</div>
-	)
-}
+	);
+};
