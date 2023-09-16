@@ -1,11 +1,22 @@
-
+import { RecipeItem } from "./recipe-item/RecipeItem"
 
 function App() {
-
-
 	return (
 		<>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis facere aspernatur omnis quisquam recusandae illo exercitationem expedita consectetur sit obcaecati?</p>
+			<div>
+				<RecipeItem recipe={{
+					id: 1,
+					name: 'Bolognese'
+				}} />
+				<RecipeItem recipe={{
+					id: 2,
+					name: 'Carbonara'
+				}} />
+				<RecipeItem recipe={{
+					id: 3,
+					name: 'Penne tuna'
+				}} />
+			</div>
 		</>
 	)
 }
