@@ -8,9 +8,12 @@ export const favoritesSlice = createSlice({
 	reducers: {
 		toggleFav: (state, action) => {
 			const recipe = action.payload;
-			const index = state.findIndex(r => r.id === recipe.id);
-			if (!index) {
-				state.splice(index, 1);
+			const isExists = state.some(item => item.id === recipe.id);
+			if (isExists) {
+				const index = state.findIndex(item => item.id === recipe.id);
+				if (index !== -1) {
+					state.splice(index, 1);
+				};
 			} else {
 				state.push(recipe);
 			}
