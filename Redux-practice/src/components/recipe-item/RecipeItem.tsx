@@ -1,8 +1,13 @@
 import { useActions } from "../../hooks/useActions";
+import { IRecipe } from "../../types/recipe.types";
 import useFavorites from "../../hooks/useFavorites";
 import useRecipe from "../../hooks/useRecipe";
 
-export function RecipeItem({ recipe }) {
+interface IRecipeItem {
+	recipe: IRecipe
+}
+
+export function RecipeItem({ recipe }: IRecipeItem) {
 	const { checkIfExists } = useFavorites();
 	const { toggleFav } = useActions();
 	const { showRecipe, toggleShowRecipe } = useRecipe();

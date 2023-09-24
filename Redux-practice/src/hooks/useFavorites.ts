@@ -1,9 +1,9 @@
-import { useSelector } from "react-redux";
 import { useCallback } from "react";
+import { useTypedSelector } from "./useTypedSelector";
 
 export default function useFavorites() {
-	const favorites = useSelector(state => state.favorites);
-	const checkIfExists = useCallback((recipeId) => {
+	const favorites = useTypedSelector(state => state.favorites);
+	const checkIfExists = useCallback((recipeId: number) => {
 		return favorites.some(r => r.id === recipeId);
 	}, [favorites]);
 	return { favorites, checkIfExists };
