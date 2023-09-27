@@ -16,7 +16,7 @@
   \*****************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"../node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"../node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `.container{\r\n\ttext-aligh: center;\r\n\tfont-size:20px;\r\n\tcolor:grey;\r\n}`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack:///./styles/style.css?../node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"../node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"../node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `*{\r\n\tmargin: 0;\r\npadding:0;\r\n}\r\n.container {\r\n\ttext-aligh: center;\r\n\tfont-size: 20px;\r\n\tcolor: grey;\r\n}\r\n.content {\r\n\twidth: 100vw;\r\n\tmin-height: 100vh;\t\r\n\tposition:relative;\r\n\tdisplay: flex;\r\n}\r\n.box {\r\n\tdisplay: flex;\r\nflex-direction: column;\r\n}\r\n.date {\r\n}\r\n.dey {\r\n}\r\n.time {\r\n}\r\n.image {\r\n\tposition:absolute;\r\n\twidth:100%;\r\n\theight:100%;\r\n\tobject-fit: cover;\r\n}\r\n`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack:///./styles/style.css?../node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -110,13 +110,33 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
-/***/ "./js/some.js":
+/***/ "./js/index.js":
+/*!*********************!*\
+  !*** ./js/index.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/style.css */ \"./styles/style.css\");\n/* harmony import */ var _page_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./page.js */ \"./js/page.js\");\n/* harmony import */ var _assets_8BrPx64NFvs_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/8BrPx64NFvs.jpg */ \"./assets/8BrPx64NFvs.jpg\");\n\r\n\r\n\r\n\r\nconst newPost = new _page_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]('Today I am learning Webpack technology', _assets_8BrPx64NFvs_jpg__WEBPACK_IMPORTED_MODULE_2__)\r\n\r\nnewPost.init()\r\n\n\n//# sourceURL=webpack:///./js/index.js?");
+
+/***/ }),
+
+/***/ "./js/page.js":
 /*!********************!*\
-  !*** ./js/some.js ***!
+  !*** ./js/page.js ***!
   \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/style.css */ \"./styles/style.css\");\n\r\n\r\nlet x = 0\r\nconst counter = () => {\r\n\tx++\r\n\treturn (\r\n\t\tdocument.addEventListener('click', console.log(`Your click ${x}`))\r\n\r\n\t)\r\n}\r\n\r\ndocument.addEventListener('click', () => { counter() })\r\ndocument.addEventListener('click', console.log('1'))\n\n//# sourceURL=webpack:///./js/some.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Page)\n/* harmony export */ });\nclass Page {\r\n\tconstructor(title, img) {\r\n\t\tthis.title = title;\r\n\t\tthis.img = img;\r\n\t\tthis.date = new Date();\r\n\t\tthis.container = document.getElementById('container');\r\n\t};\r\n\tgetTime() {\r\n\t\tsetInterval(() => {\r\n\t\t\tconst isTime = new Date().toLocaleTimeString();\r\n\t\t\tconst timeElement = document.querySelector('.time');\r\n\t\t\tif (timeElement) {\r\n\t\t\t\ttimeElement.textContent = isTime;\r\n\t\t\t}\r\n\t\t}, 1000);\r\n\t}\r\n\tcreateContent() {\r\n\t\tconst title = this.title;\r\n\t\tconst isDate = this.date.toLocaleDateString();\r\n\t\tconst isDay = this.date.toLocaleDateString(undefined, { weekday: 'long' });\r\n\t\tconst content = `\r\n\t\t\t<div class=\"content\">\r\n\t\t\t\t<h2>${title}</h2>\r\n\t\t\t\t<div class=\"box\">\r\n\t\t\t\t\t<span class=\"date\">${isDate}</span>\r\n\t\t\t\t\t<span class=\"dey\">${isDay}</span>\r\n\t\t\t\t\t<span class=\"time\">${this.getTime()}</span>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t`\r\n\t\treturn content\r\n\t};\r\n\trender() {\r\n\t\tconst image = this.img;\r\n\t\tconst content = this.createContent();\r\n\t\tconst imageEl = document.createElement('img');\r\n\r\n\t\timageEl.classList.add('image')\r\n\t\timageEl.src = image;\r\n\t\timageEl.alt = 'Some image';\r\n\r\n\t\tthis.container.appendChild(imageEl);\r\n\t\tthis.container.insertAdjacentHTML('beforeend', content);\r\n\r\n\t};\r\n\r\n\tinit() {\r\n\t\tdocument.addEventListener('DOMContentLoaded', function () {\r\n\t\t\tthis.render();\r\n\t\t}.bind(this));\r\n\t}\r\n};\r\n\r\n\n\n//# sourceURL=webpack:///./js/page.js?");
+
+/***/ }),
+
+/***/ "./assets/8BrPx64NFvs.jpg":
+/*!********************************!*\
+  !*** ./assets/8BrPx64NFvs.jpg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"320ad72de9faf0a8f307.jpg\";\n\n//# sourceURL=webpack:///./assets/8BrPx64NFvs.jpg?");
 
 /***/ })
 
@@ -171,6 +191,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -187,6 +219,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nc = undefined;
@@ -197,7 +252,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./js/some.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./js/index.js");
 /******/ 	
 /******/ })()
 ;

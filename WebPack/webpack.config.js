@@ -5,7 +5,8 @@ module.exports = {
 	context: path.resolve(__dirname, 'src'),
 	mode: 'development',
 	entry: {
-		main: './js/index.js',
+		index: './js/index.js',
+		page: './js/page.js',
 		some: './js/some.js'
 	},
 	output: {
@@ -14,7 +15,7 @@ module.exports = {
 	},
 	plugins: [
 		new HTMLWebpackPlugin({
-			template: '../index.html',
+			template: './index.html',
 		}),
 		new CleanWebpackPlugin()
 	],
@@ -23,6 +24,10 @@ module.exports = {
 			{
 				test: /\.css$/,
 				use: ['style-loader', 'css-loader']
+			},
+			{
+				test: /\.(png|jpg|svg|gif)$/,
+				type: 'asset/resource'
 			}
 		]
 	}

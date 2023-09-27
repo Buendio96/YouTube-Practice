@@ -10,4 +10,4 @@ const counter = () => {
 }
 
 document.addEventListener('click', () => { counter() })
-document.addEventListener('click', console.log('1'))
+
