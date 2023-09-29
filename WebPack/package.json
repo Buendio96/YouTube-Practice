@@ -2,11 +2,12 @@
 	"name": "webpack",
 	"version": "1.0.0",
 	"description": "Webpack course 2023",
-	"main": "index.js",
+	"private": true,
 	"scripts": {
 		"dev": "webpack --mode development",
 		"build": "webpack --mode production",
-		"watch": "webpack --mode development --watch"
+		"watch": "webpack --mode development --watch",
+		"start": "webpack-dev-server --mode development --open"
 	},
 	"keywords": [
 		"js",
@@ -17,11 +18,19 @@
 	"license": "ISC",
 	"devDependencies": {
 		"clean-webpack-plugin": "^4.0.0",
+		"copy-webpack-plugin": "^11.0.0",
 		"css-loader": "^6.8.1",
+		"csv-loader": "^3.0.5",
 		"file-loader": "^6.2.0",
 		"html-webpack-plugin": "^5.5.3",
 		"style-loader": "^3.3.3",
 		"webpack": "^5.88.2",
-		"webpack-cli": "^5.1.4"
+		"webpack-cli": "^5.1.4",
+		"webpack-dev-server": "^4.15.1",
+		"xml-loader": "^1.2.1"
+	},
+	"dependencies": {
+		"jquery": "^3.7.1",
+		"normalize.css": "^8.0.1"
 	}
 }
