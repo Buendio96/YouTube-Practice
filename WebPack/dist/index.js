@@ -19,14 +19,25 @@ eval("module.exports = [[\"Year\",\"Industry_aggregation_NZSIOC\",\"Industry_cod
 
 /***/ }),
 
-/***/ "./styles/style.css":
-/*!**************************!*\
-  !*** ./styles/style.css ***!
-  \**************************/
+/***/ "./styles/style.scss":
+/*!***************************!*\
+  !*** ./styles/style.scss ***!
+  \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./styles/style.css?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./styles/style.scss?");
+
+/***/ }),
+
+/***/ "./styles/newStyle.css":
+/*!*****************************!*\
+  !*** ./styles/newStyle.css ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./styles/newStyle.css?");
 
 /***/ }),
 
@@ -47,7 +58,7 @@ eval("module.exports = {\"email\":{\"to\":[\"Oleksandr\"],\"from\":[\"WebPack\"]
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/style */ \"./styles/style.css\");\n/* harmony import */ var _models_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @models/page */ \"./models/page.js\");\n/* harmony import */ var _assets_8BrPx64NFvs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @assets/8BrPx64NFvs */ \"./assets/8BrPx64NFvs.jpg\");\n/* harmony import */ var _assets_data_xml__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @assets/data.xml */ \"./assets/data.xml\");\n/* harmony import */ var _assets_data_xml__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assets_data_xml__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _assets_example_csv__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @assets/example.csv */ \"./assets/example.csv\");\n/* harmony import */ var _assets_example_csv__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_example_csv__WEBPACK_IMPORTED_MODULE_4__);\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nconst newPost = new _models_page__WEBPACK_IMPORTED_MODULE_1__[\"default\"]('Today I am learning Webpack technology', _assets_8BrPx64NFvs__WEBPACK_IMPORTED_MODULE_2__)\r\n\r\nnewPost.init()\r\nconsole.log(\"XML: \", (_assets_data_xml__WEBPACK_IMPORTED_MODULE_3___default()))\r\nconsole.log(\"XML: \", (_assets_example_csv__WEBPACK_IMPORTED_MODULE_4___default()))\n\n//# sourceURL=webpack:///./js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_newStyle_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/newStyle.css */ \"./styles/newStyle.css\");\n/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/style.scss */ \"./styles/style.scss\");\n/* harmony import */ var _models_page__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @models/page */ \"./models/page.js\");\n/* harmony import */ var _assets_8BrPx64NFvs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @assets/8BrPx64NFvs */ \"./assets/8BrPx64NFvs.jpg\");\n/* harmony import */ var _assets_data_xml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @assets/data.xml */ \"./assets/data.xml\");\n/* harmony import */ var _assets_data_xml__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_data_xml__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _assets_example_csv__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @assets/example.csv */ \"./assets/example.csv\");\n/* harmony import */ var _assets_example_csv__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_assets_example_csv__WEBPACK_IMPORTED_MODULE_5__);\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nconst newPost = new _models_page__WEBPACK_IMPORTED_MODULE_2__[\"default\"](`Today I am learning Webpack technology`, _assets_8BrPx64NFvs__WEBPACK_IMPORTED_MODULE_3__)\r\n\r\nnewPost.init()\r\nconsole.log(\"XML: \", (_assets_data_xml__WEBPACK_IMPORTED_MODULE_4___default()))\r\nconsole.log(\"XML: \", (_assets_example_csv__WEBPACK_IMPORTED_MODULE_5___default()))\n\n//# sourceURL=webpack:///./js/index.js?");
 
 /***/ }),
 
@@ -58,7 +69,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Page)\n/* harmony export */ });\n\r\nclass Page {\r\n\tconstructor(title, img) {\r\n\t\tthis.title = title;\r\n\t\tthis.img = img;\r\n\t\tthis.date = new Date();\r\n\t\tthis.container = document.getElementById('container');\r\n\t};\r\n\r\n\tcreateContent() {\r\n\t\tconst title = this.title;\r\n\t\tconst isDate = this.date.toLocaleDateString();\r\n\t\tconst isDay = this.date.toLocaleDateString(undefined, { weekday: 'long' });\r\n\t\tconst content = `\r\n\t\t\t<div class=\"content\">\r\n\t\t\t\t<h2>${title}</h2>\r\n\t\t\t\t<div class=\"box\">\r\n\t\t\t\t\t<span class=\"date\">${isDate}</span>\r\n\t\t\t\t\t<span class=\"dey\">${isDay}</span>\r\n\t\t\t\t\t<span class=\"time\">${this.getTime()}</span>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t`\r\n\t\treturn content\r\n\t};\r\n\tgetTime() {\r\n\t\tsetInterval(() => {\r\n\t\t\tconst isTime = new Date().toLocaleTimeString();\r\n\t\t\tconst timeElement = document.querySelector('.time');\r\n\t\t\tif (timeElement) {\r\n\t\t\t\ttimeElement.textContent = isTime;\r\n\t\t\t}\r\n\t\t}, 1000);\r\n\t};\r\n\trender() {\r\n\t\tconst image = this.img;\r\n\t\tconst content = this.createContent();\r\n\t\tconst imageEl = document.createElement('img');\r\n\r\n\t\timageEl.classList.add('image')\r\n\t\timageEl.src = image;\r\n\t\timageEl.alt = 'Some image';\r\n\r\n\t\tthis.container.appendChild(imageEl);\r\n\t\tthis.container.insertAdjacentHTML('beforeend', content);\r\n\r\n\t};\r\n\r\n\tinit() {\r\n\t\tdocument.addEventListener('DOMContentLoaded', () => {\r\n\t\t\tthis.render();\r\n\t\t});\r\n\t}\r\n};\r\n\r\n\n\n//# sourceURL=webpack:///./models/page.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Page)\n/* harmony export */ });\n\r\nclass Page {\r\n\tconstructor(title, img) {\r\n\t\tthis.title = title;\r\n\t\tthis.img = img;\r\n\t\tthis.date = new Date();\r\n\t\tthis.container = document.getElementById('container');\r\n\t};\r\n\r\n\tcreateContent() {\r\n\t\tconst title = this.title;\r\n\t\tconst isDate = this.date.toLocaleDateString();\r\n\t\tconst isDay = this.date.toLocaleDateString('en-US', { weekday: 'long' });\r\n\t\tconst content = `\r\n\t\t\t<div class=\"content\">\r\n\t\t\t\t<h2 class=\"title\">${title}</h2>\r\n\t\t\t\t<div class=\"box\">\r\n\t\t\t\t<span class=\"dey\">${isDay}</span>\r\n\t\t\t\t<span class=\"date\">${isDate}</span>\r\n\t\t\t\t\t<span class=\"time\">${this.getTime()}</span>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t`\r\n\t\treturn content\r\n\t};\r\n\tgetTime() {\r\n\t\tsetInterval(() => {\r\n\t\t\tconst isTime = new Date().toLocaleTimeString();\r\n\t\t\tconst timeElement = document.querySelector('.time');\r\n\t\t\tif (timeElement) {\r\n\t\t\t\ttimeElement.textContent = isTime;\r\n\t\t\t}\r\n\t\t}, 1000);\r\n\t};\r\n\trender() {\r\n\t\tconst image = this.img;\r\n\t\tconst content = this.createContent();\r\n\t\tconst imageEl = document.createElement('img');\r\n\r\n\t\timageEl.classList.add('image')\r\n\t\timageEl.src = image;\r\n\t\timageEl.alt = 'Some image';\r\n\r\n\t\tthis.container.appendChild(imageEl);\r\n\t\tthis.container.insertAdjacentHTML('beforeend', content);\r\n\r\n\t};\r\n\r\n\tinit() {\r\n\t\tdocument.addEventListener('DOMContentLoaded', () => {\r\n\t\t\tthis.render();\r\n\t\t});\r\n\t}\r\n};\r\n\r\n\n\n//# sourceURL=webpack:///./models/page.js?");
 
 /***/ }),
 

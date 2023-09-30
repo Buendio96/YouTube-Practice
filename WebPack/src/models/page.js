@@ -10,13 +10,13 @@ export default class Page {
 	createContent() {
 		const title = this.title;
 		const isDate = this.date.toLocaleDateString();
-		const isDay = this.date.toLocaleDateString(undefined, { weekday: 'long' });
+		const isDay = this.date.toLocaleDateString('en-US', { weekday: 'long' });
 		const content = `
 			<div class="content">
-				<h2>${title}</h2>
+				<h2 class="title">${title}</h2>
 				<div class="box">
-					<span class="date">${isDate}</span>
-					<span class="dey">${isDay}</span>
+				<span class="dey">${isDay}</span>
+				<span class="date">${isDate}</span>
 					<span class="time">${this.getTime()}</span>
 				</div>
 			</div>

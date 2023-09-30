@@ -4,6 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
+
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
@@ -26,9 +27,10 @@ const fileName = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`
 
 module.exports = {
 	context: path.resolve(__dirname, 'src'),
+	target: 'web',
 	mode: 'development',
 	entry: {
-		index: './js/index.js',
+		index: './index.js',
 		page: './models/page.js',
 	},
 	output: {
@@ -38,7 +40,7 @@ module.exports = {
 	},
 	resolve: {
 		extensions: [
-			'.js', '.json', '.css', '.jpg'
+			'.js', '.json', '.css', '.jpg', 'scss'
 		],
 		alias: {
 			'@models': path.resolve(__dirname, 'src/models'),
@@ -75,13 +77,13 @@ module.exports = {
 			test: /\.css$/,
 			use: [MiniCssExtractPlugin.loader, 'css-loader'],
 		}, {
-			test: /\.less$/,
-			use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'],
+			test: /\.s[ac]ss$/,
+			use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
 		}, {
 			test: /\.(png|jpg|svg|gif)$/,
 			type: 'asset/resource'
 		}, {
-			test: /\.(ttf|woff|sowff2|eot)$/,
+			test: /\.(woff|woff2|eot|ttf|otf)$/,
 			type: 'asset/resource'
 		}, {
 			test: /\.xml$/,
