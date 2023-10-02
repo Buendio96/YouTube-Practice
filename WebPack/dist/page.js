@@ -10,13 +10,13 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./models/page.js":
+/***/ "./models/page.ts":
 /*!************************!*\
-  !*** ./models/page.js ***!
+  !*** ./models/page.ts ***!
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Page)\n/* harmony export */ });\n\r\nclass Page {\r\n\tconstructor(title, img) {\r\n\t\tthis.title = title;\r\n\t\tthis.img = img;\r\n\t\tthis.date = new Date();\r\n\t\tthis.container = document.getElementById('container');\r\n\t};\r\n\r\n\tcreateContent() {\r\n\t\tconst title = this.title;\r\n\t\tconst isDate = this.date.toLocaleDateString();\r\n\t\tconst isDay = this.date.toLocaleDateString('en-US', { weekday: 'long' });\r\n\t\tconst content = `\r\n\t\t\t<div class=\"content\">\r\n\t\t\t\t<h2 class=\"title\">${title}</h2>\r\n\t\t\t\t<div class=\"box\">\r\n\t\t\t\t<span class=\"dey\">${isDay}</span>\r\n\t\t\t\t<span class=\"date\">${isDate}</span>\r\n\t\t\t\t\t<span class=\"time\">${this.getTime()}</span>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t`\r\n\t\treturn content\r\n\t};\r\n\tgetTime() {\r\n\t\tsetInterval(() => {\r\n\t\t\tconst isTime = new Date().toLocaleTimeString();\r\n\t\t\tconst timeElement = document.querySelector('.time');\r\n\t\t\tif (timeElement) {\r\n\t\t\t\ttimeElement.textContent = isTime;\r\n\t\t\t}\r\n\t\t}, 1000);\r\n\t};\r\n\trender() {\r\n\t\tconst image = this.img;\r\n\t\tconst content = this.createContent();\r\n\t\tconst imageEl = document.createElement('img');\r\n\r\n\t\timageEl.classList.add('image')\r\n\t\timageEl.src = image;\r\n\t\timageEl.alt = 'Some image';\r\n\r\n\t\tthis.container.appendChild(imageEl);\r\n\t\tthis.container.insertAdjacentHTML('beforeend', content);\r\n\r\n\t};\r\n\r\n\tinit() {\r\n\t\tdocument.addEventListener('DOMContentLoaded', () => {\r\n\t\t\tthis.render();\r\n\t\t});\r\n\t}\r\n};\r\n\r\n\n\n//# sourceURL=webpack:///./models/page.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Page)\n/* harmony export */ });\nclass Page {\n  constructor(title, img) {\n    this.title = title;\n    this.img = img;\n    this.date = new Date();\n    this.container = document.getElementById('container');\n  }\n  getTime() {\n    return this.date.toLocaleTimeString();\n  }\n  createContent() {\n    const isDate = this.date.toLocaleDateString();\n    const isDay = this.date.toLocaleDateString('en-US', {\n      weekday: 'long'\n    });\n    const content = \"\\n\\t\\t\\t\\t<img src=\".concat(this.img, \" class=\\\"image\\\" alt=\\\"Some picture\\\">\\n\\t\\t\\t\\t<div class=\\\"content\\\">\\n\\t\\t\\t\\t\\t<h2 class=\\\"title\\\">\").concat(this.title, \"</h2>\\n\\t\\t\\t\\t\\t<div class=\\\"box\\\">\\n\\t\\t\\t\\t\\t\\t<span class=\\\"dey\\\">\").concat(isDay, \"</span>\\n\\t\\t\\t\\t\\t\\t<span class=\\\"date\\\">\").concat(isDate, \"</span>\\n\\t\\t\\t\\t\\t\\t<span id=\\\"time\\\" class=\\\"time\\\"></span>\\n\\t\\t\\t\\t\\t</div>\\n\\t\\t\\t\\t</div>\\n\\t\\t\\t\\n\\t\\t\\t\");\n    return content;\n  }\n  initClock() {\n    const timeEl = document.getElementById('time');\n    if (timeEl) {\n      timeEl.textContent = new Date().toLocaleTimeString();\n    }\n  }\n  render() {\n    const content = this.createContent();\n    if (this.container) {\n      this.container.insertAdjacentHTML('beforeend', content);\n    }\n    ;\n    this.initClock();\n    setInterval(() => this.initClock(), 1000);\n  }\n  init() {\n    document.addEventListener('DOMContentLoaded', () => {\n      this.render();\n    });\n  }\n}\n;\n\n//# sourceURL=webpack:///./models/page.ts?");
 
 /***/ })
 
@@ -60,7 +60,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
 /******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./models/page.js"](0, __webpack_exports__, __webpack_require__);
+/******/ 	__webpack_modules__["./models/page.ts"](0, __webpack_exports__, __webpack_require__);
 /******/ 	
 /******/ })()
 ;

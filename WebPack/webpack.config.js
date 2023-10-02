@@ -4,7 +4,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
-
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
@@ -22,16 +21,31 @@ const optimization = () => {
 	}
 	return config
 };
-const fileName = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`
 
+const fileName = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`;
+
+const babelOptions = preset => {
+	const opts = {
+		presets: [
+			'@babel/preset-env'
+		],
+		plugins: [
+			//Here may be some plugins
+		]
+	};
+	if (preset) {
+		opts.presets.push(preset)
+	};
+	return opts
+};
 
 module.exports = {
 	context: path.resolve(__dirname, 'src'),
 	target: 'web',
 	mode: 'development',
 	entry: {
-		index: './index.js',
-		page: './models/page.js',
+		index: ['core-js/stable', './index.js'],
+		page: './models/page.ts',
 	},
 	output: {
 		filename: fileName('js'),
@@ -40,7 +54,7 @@ module.exports = {
 	},
 	resolve: {
 		extensions: [
-			'.js', '.json', '.css', '.jpg', 'scss'
+			".js", ".ts", ".json", ".css", ".jpg", ".scss"
 		],
 		alias: {
 			'@models': path.resolve(__dirname, 'src/models'),
@@ -53,6 +67,7 @@ module.exports = {
 		port: 4200,
 		hot: isDev,
 	},
+
 	//================================================PLUGINS=======
 	plugins: [
 		new HTMLWebpackPlugin({
@@ -69,7 +84,7 @@ module.exports = {
 		}),
 		new MiniCssExtractPlugin({
 			filename: fileName('css'),
-		})
+		}),
 	],
 	//================================================MODULS=======
 	module: {
@@ -91,6 +106,21 @@ module.exports = {
 		}, {
 			test: /\.csv$/,
 			use: 'csv-loader',
-		}]
+		}, {
+			test: /\.js$/,
+			exclude: /node_modules/,
+			use: {
+				loader: 'babel-loader',
+				options: babelOptions()
+			}
+		}, {
+			test: /\.ts$/,
+			exclude: /node_modules/,
+			use: {
+				loader: 'babel-loader',
+				options: babelOptions('@babel/preset-typescript')
+			},
+		},
+		]
 	}
 };

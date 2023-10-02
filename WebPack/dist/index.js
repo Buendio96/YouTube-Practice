@@ -9,6 +9,38 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./index.js":
+/*!******************!*\
+  !*** ./index.js ***!
+  \******************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_newStyle_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/newStyle.css */ \"./styles/newStyle.css\");\n/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/style.scss */ \"./styles/style.scss\");\n/* harmony import */ var _models_page__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @models/page */ \"./models/page.ts\");\n/* harmony import */ var _models_babel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @models/babel */ \"./models/babel.js\");\n/* harmony import */ var _models_babel__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_models_babel__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _assets_8BrPx64NFvs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @assets/8BrPx64NFvs */ \"./assets/8BrPx64NFvs.jpg\");\n/* harmony import */ var _assets_data_xml__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @assets/data.xml */ \"./assets/data.xml\");\n/* harmony import */ var _assets_data_xml__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_assets_data_xml__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _assets_example_csv__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @assets/example.csv */ \"./assets/example.csv\");\n/* harmony import */ var _assets_example_csv__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_assets_example_csv__WEBPACK_IMPORTED_MODULE_6__);\n\n\n\n\n\n\n\nconst newPost = new _models_page__WEBPACK_IMPORTED_MODULE_2__[\"default\"](\"Today I am learning Webpack technology\", _assets_8BrPx64NFvs__WEBPACK_IMPORTED_MODULE_4__);\nnewPost.init();\nconsole.log(\"XML: \", (_assets_data_xml__WEBPACK_IMPORTED_MODULE_5___default()));\nconsole.log(\"XML: \", (_assets_example_csv__WEBPACK_IMPORTED_MODULE_6___default()));\nconsole.log(_assets_8BrPx64NFvs__WEBPACK_IMPORTED_MODULE_4__);\n\n//# sourceURL=webpack:///./index.js?");
+
+/***/ }),
+
+/***/ "./models/babel.js":
+/*!*************************!*\
+  !*** ./models/babel.js ***!
+  \*************************/
+/***/ (() => {
+
+eval("function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\nfunction _toPropertyKey(arg) { var key = _toPrimitive(arg, \"string\"); return typeof key === \"symbol\" ? key : String(key); }\nfunction _toPrimitive(input, hint) { if (typeof input !== \"object\" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || \"default\"); if (typeof res !== \"object\") return res; throw new TypeError(\"@@toPrimitive must return a primitive value.\"); } return (hint === \"string\" ? String : Number)(input); }\nasync function start() {\n  return await Promise.resolve('async is working');\n}\n;\nstart().then(console.log);\nclass Util {}\n_defineProperty(Util, \"id\", Date.now());\n;\nconsole.log('Id is: ', Util.id);\n\n//# sourceURL=webpack:///./models/babel.js?");
+
+/***/ }),
+
+/***/ "./models/page.ts":
+/*!************************!*\
+  !*** ./models/page.ts ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Page)\n/* harmony export */ });\nclass Page {\n  constructor(title, img) {\n    this.title = title;\n    this.img = img;\n    this.date = new Date();\n    this.container = document.getElementById('container');\n  }\n  getTime() {\n    return this.date.toLocaleTimeString();\n  }\n  createContent() {\n    const isDate = this.date.toLocaleDateString();\n    const isDay = this.date.toLocaleDateString('en-US', {\n      weekday: 'long'\n    });\n    const content = \"\\n\\t\\t\\t\\t<img src=\".concat(this.img, \" class=\\\"image\\\" alt=\\\"Some picture\\\">\\n\\t\\t\\t\\t<div class=\\\"content\\\">\\n\\t\\t\\t\\t\\t<h2 class=\\\"title\\\">\").concat(this.title, \"</h2>\\n\\t\\t\\t\\t\\t<div class=\\\"box\\\">\\n\\t\\t\\t\\t\\t\\t<span class=\\\"dey\\\">\").concat(isDay, \"</span>\\n\\t\\t\\t\\t\\t\\t<span class=\\\"date\\\">\").concat(isDate, \"</span>\\n\\t\\t\\t\\t\\t\\t<span id=\\\"time\\\" class=\\\"time\\\"></span>\\n\\t\\t\\t\\t\\t</div>\\n\\t\\t\\t\\t</div>\\n\\t\\t\\t\\n\\t\\t\\t\");\n    return content;\n  }\n  initClock() {\n    const timeEl = document.getElementById('time');\n    if (timeEl) {\n      timeEl.textContent = new Date().toLocaleTimeString();\n    }\n  }\n  render() {\n    const content = this.createContent();\n    if (this.container) {\n      this.container.insertAdjacentHTML('beforeend', content);\n    }\n    ;\n    this.initClock();\n    setInterval(() => this.initClock(), 1000);\n  }\n  init() {\n    document.addEventListener('DOMContentLoaded', () => {\n      this.render();\n    });\n  }\n}\n;\n\n//# sourceURL=webpack:///./models/page.ts?");
+
+/***/ }),
+
 /***/ "./assets/example.csv":
 /*!****************************!*\
   !*** ./assets/example.csv ***!
@@ -51,28 +83,6 @@ eval("module.exports = {\"email\":{\"to\":[\"Oleksandr\"],\"from\":[\"WebPack\"]
 
 /***/ }),
 
-/***/ "./js/index.js":
-/*!*********************!*\
-  !*** ./js/index.js ***!
-  \*********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_newStyle_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/newStyle.css */ \"./styles/newStyle.css\");\n/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/style.scss */ \"./styles/style.scss\");\n/* harmony import */ var _models_page__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @models/page */ \"./models/page.js\");\n/* harmony import */ var _assets_8BrPx64NFvs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @assets/8BrPx64NFvs */ \"./assets/8BrPx64NFvs.jpg\");\n/* harmony import */ var _assets_data_xml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @assets/data.xml */ \"./assets/data.xml\");\n/* harmony import */ var _assets_data_xml__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_data_xml__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _assets_example_csv__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @assets/example.csv */ \"./assets/example.csv\");\n/* harmony import */ var _assets_example_csv__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_assets_example_csv__WEBPACK_IMPORTED_MODULE_5__);\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nconst newPost = new _models_page__WEBPACK_IMPORTED_MODULE_2__[\"default\"](`Today I am learning Webpack technology`, _assets_8BrPx64NFvs__WEBPACK_IMPORTED_MODULE_3__)\r\n\r\nnewPost.init()\r\nconsole.log(\"XML: \", (_assets_data_xml__WEBPACK_IMPORTED_MODULE_4___default()))\r\nconsole.log(\"XML: \", (_assets_example_csv__WEBPACK_IMPORTED_MODULE_5___default()))\n\n//# sourceURL=webpack:///./js/index.js?");
-
-/***/ }),
-
-/***/ "./models/page.js":
-/*!************************!*\
-  !*** ./models/page.js ***!
-  \************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Page)\n/* harmony export */ });\n\r\nclass Page {\r\n\tconstructor(title, img) {\r\n\t\tthis.title = title;\r\n\t\tthis.img = img;\r\n\t\tthis.date = new Date();\r\n\t\tthis.container = document.getElementById('container');\r\n\t};\r\n\r\n\tcreateContent() {\r\n\t\tconst title = this.title;\r\n\t\tconst isDate = this.date.toLocaleDateString();\r\n\t\tconst isDay = this.date.toLocaleDateString('en-US', { weekday: 'long' });\r\n\t\tconst content = `\r\n\t\t\t<div class=\"content\">\r\n\t\t\t\t<h2 class=\"title\">${title}</h2>\r\n\t\t\t\t<div class=\"box\">\r\n\t\t\t\t<span class=\"dey\">${isDay}</span>\r\n\t\t\t\t<span class=\"date\">${isDate}</span>\r\n\t\t\t\t\t<span class=\"time\">${this.getTime()}</span>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t`\r\n\t\treturn content\r\n\t};\r\n\tgetTime() {\r\n\t\tsetInterval(() => {\r\n\t\t\tconst isTime = new Date().toLocaleTimeString();\r\n\t\t\tconst timeElement = document.querySelector('.time');\r\n\t\t\tif (timeElement) {\r\n\t\t\t\ttimeElement.textContent = isTime;\r\n\t\t\t}\r\n\t\t}, 1000);\r\n\t};\r\n\trender() {\r\n\t\tconst image = this.img;\r\n\t\tconst content = this.createContent();\r\n\t\tconst imageEl = document.createElement('img');\r\n\r\n\t\timageEl.classList.add('image')\r\n\t\timageEl.src = image;\r\n\t\timageEl.alt = 'Some image';\r\n\r\n\t\tthis.container.appendChild(imageEl);\r\n\t\tthis.container.insertAdjacentHTML('beforeend', content);\r\n\r\n\t};\r\n\r\n\tinit() {\r\n\t\tdocument.addEventListener('DOMContentLoaded', () => {\r\n\t\t\tthis.render();\r\n\t\t});\r\n\t}\r\n};\r\n\r\n\n\n//# sourceURL=webpack:///./models/page.js?");
-
-/***/ }),
-
 /***/ "./assets/8BrPx64NFvs.jpg":
 /*!********************************!*\
   !*** ./assets/8BrPx64NFvs.jpg ***!
@@ -104,13 +114,48 @@ eval("module.exports = __webpack_require__.p + \"320ad72de9faf0a8f307.jpg\";\n\n
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
@@ -186,12 +231,67 @@ eval("module.exports = __webpack_require__.p + \"320ad72de9faf0a8f307.jpg\";\n\n
 /******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"index": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
 /************************************************************************/
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./js/index.js");
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	__webpack_require__.O(undefined, ["vendors-node_modules_core-js_stable_index_js"], () => (__webpack_require__("../node_modules/core-js/stable/index.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_core-js_stable_index_js"], () => (__webpack_require__("./index.js")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
 ;
