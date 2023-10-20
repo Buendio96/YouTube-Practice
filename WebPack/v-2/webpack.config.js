@@ -24,6 +24,20 @@ module.exports = {
 		path: path.resolve(__dirname, 'dist'),
 		clean: true,
 		filename: '[name].[contenthash].js',
+		assetModuleFilename: 'assets/[hash][ext]'
+	},
+	resolve: {
+		extensions: [
+			".html", ".js", ".ts", ".json", ".css", ".scss", ".png", ".jpg",
+		],
+		alias: {
+			'@': path.resolve(__dirname, 'src'),
+			'@fonts': path.resolve(__dirname, 'src/fonts'),
+			'@img': path.resolve(__dirname, 'src/img'),
+			'@libs': path.resolve(__dirname, 'src/libs'),
+			'@modules': path.resolve(__dirname, 'src/modules'),
+			'@styles': path.resolve(__dirname, 'src/styles'),
+		}
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
@@ -71,6 +85,30 @@ module.exports = {
 			generator: {
 				filename: 'fonts/[name].[ext]'
 			}
+		}, {
+			test: /\.(jpe?g|png|webp|gif|svg)$/i,
+			use: [{
+				loader: 'image-webpack-loader',
+				options: {
+					mozjpeg: {
+						progressive: true,
+					},
+					optipng: {
+						enabled: false,
+					},
+					pngquant: {
+						quality: [0.65, 0.90],
+						speed: 4
+					},
+					gifsicle: {
+						interlaced: false,
+					},
+					webp: {
+						quality: 75
+					}
+				}
+			}],
+			type: 'asset/resource',
 		}]
 	}
-}
+};
